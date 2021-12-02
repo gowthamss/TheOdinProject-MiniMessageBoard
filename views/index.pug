@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+//- a(class='button' href='//new') Add New Message
+
+block content 
+  each message in messages
+    p= message.text
+    b= message.user
+    p= message.added
